@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Workflow</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+        </div>
+    </header>
+    <div class="container">
+        <h2>Welcome Adeyinka!</h2>
+        <div class="section">
+            <div class="box">
+                <h3>Announcement</h3>
+                <table id="announcementTable">
+                    <tr>
+                        <th>Announcement</th>
+                        <th>Time</th>
+                        <th>Add</th>
+                    </tr>
+                    <tr>
+                        <td>New Travel Policy</td>
+                        <td>2m</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Welcome onboard Tolu!</td>
+                        <td>5m</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>New Travel Policy</td>
+                        <td>2m</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+                <div class="input-form">
+                    <input type="text" id="announcement" placeholder="Announcement">
+                    <input type="text" id="time" placeholder="Time">
+                    <input type="text" id="add" placeholder="Add">
+                    <button onclick="addAnnouncement()">Add</button>
+                </div>
+            </div>
+            <div class="box">
+                <h3>My Shortcuts</h3>
+                <div class="shortcuts">
+                    <div class="shortcut-item">My Tasks</div>
+                    <div class="shortcut-item">My Events</div>
+                    <div class="shortcut-item">My logged time</div>
+                    <div class="shortcut-item">My Activities</div>
+                    <div class="shortcut-item">Bookmarks</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="box">
+                <h3>My Projects</h3>
+                <table id="projectsTable">
+                    <tr>
+                        <th>Title</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                    <tr>
+                        <td>Landing Page Redesign</td>
+                        <td>1 May</td>
+                        <td>1 Sept</td>
+                    </tr>
+                    <tr>
+                        <td>Landing Page Redesign</td>
+                        <td>1 May</td>
+                        <td>1 Sept</td>
+                    </tr>
+                    <tr>
+                        <td>Landing Page Redesign</td>
+                        <td>1 May</td>
+                        <td>1 Sept</td>
+                    </tr>
+                </table>
+                <div class="input-form">
+                    <input type="text" id="title" placeholder="Title">
+                    <input type="text" id="startDate" placeholder="Start Date">
+                    <input type="text" id="endDate" placeholder="End Date">
+                    <button onclick="addProject()">Add</button>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Agenda</h3>
+                <table>
+                    <tr>
+                        <th>Agenda</th>
+                        <th>Overdue</th>
+                        <th>Today</th>
+                        <th>Upcoming</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
