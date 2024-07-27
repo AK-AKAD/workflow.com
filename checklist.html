@@ -4,17 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklist</title>
+    <link rel="stylesheet" href="css/checklist.css">
 </head>
 <body>
     <header>
         <div>
-            <h1>Workflow</h1>
+        <h2>Workflow</h2>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="inbox.html">Inbox</a>
-                <a href="checklist.html">Checklist</a>
+                
             </nav>
         </div>
-        <div>
-            <span>Product Designer</span>
-            <img src="profile.jpg" alt="
+        
+            <main>
+                <section class="checklists">
+                    <h1>Checklists</h1>
+                    <div class="filter">
+                        <input type="text" placeholder="Search...">
+                        <button>Filter</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Assignees</th>
+                                <th>Activity</th>
+                                <th>Due</th>
+                                <th>Status</th>
+                                <th>Overdue Tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Akin</td>
+                                <td>Backend Developer</td>
+                                <td>2 days ago</td>
+                                <td>Aug 10</td>
+                                <td class="status due-soon">Due soon</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Mmesoma</td>
+                                <td>Frontend Developer</td>
+                                <td>2 days ago</td>
+                                <td>Aug 20</td>
+                                <td class="status on-track">On-Track</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Olamide</td>
+                                <td>Project Manager</td>
+                                <td>2 days ago</td>
+                                <td>Aug 10</td>
+                                <td class="status due-soon">Due soon</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <script src="JS/checklist.js"></script>
+        </body>
+        </html>
+
