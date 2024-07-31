@@ -5,59 +5,99 @@ body{
     background-color: #f5f5f5;
 }
 .logo  {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
 }
-header {
- margin-right:20px;
-  cursor: pointer;
-  display: inline-flex;
- float: right;
- 
+    header.container{
+        background-color: transparent;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-h2{
-    text-align: center;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+.auth-buttons {
+    display: flex;
+    gap: 20px;
+    float: right;
+}
+
+button {
+    padding: 4px 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.login-btn {
+    color: #6a1b9a;
+    background-color: #fff;
+    border: 1px solid #6a1b9a;
+}
+.login-btn:hover{
+    background-color: #6a1b9a;
+    color: #fff;
+}
+.signup-btn {
+    background-color: #fff;
+    color: #6a1b9a;
+    border: 1px solid #6a1b9a;
+}
+
+.signup-btn:hover {
+    background-color: #6a1b9a;
+    color: #fff;
 }
 .container {
     padding-top: 60px;
     padding-bottom: 20px;
-    display: inline-flex;
-    float: left;
+    display: flex;
+    align-items: center;
+    gap: 4%;
     background: #f5f5f5;
    
 }
 .container img{
-    justify-content: left;
-    padding-left: 0.5px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    width: 40%;
 }
 
 main{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    background: lightgray;
+    font-family: sans-serif;
+    font-size: 17px;
+    background: #F5F5F5;
     text-align: center;
-    justify-content: center;
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0,0,0,0.5);
-   display: inline-block;
-   margin-left: 60px;
-   margin-top: 30px;
-   margin-bottom: 40px;
-   height:450px ;
-   width: 600px;
-  
+    margin-bottom: 10px;
+    width: 50%;
+    height: 390px;
+  padding: 40px 20px 40px 20px;
+}
+main p{
+font-size: 15px;
+line-height: 28px;
 }
 .input-group input{
-    cursor: pointer;
+    width: 100%;
+    background: transparent;
+    border: 2px;
+    padding: 2px;
+    border-bottom: 2px solid #BCBCBC;
+    margin-bottom: 20px;
+}
+
+.input-group input:focus{
+    outline: none
 }
 
 main button{
     cursor: pointer;
+    background: #513BA8;
+    border-radius: 20px;
+    height: 30px;
+width: 80%;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
 }
 img{
     padding: 10px;
@@ -67,11 +107,94 @@ img{
    margin-left: 80px;
 margin-bottom: 10px;
 }
-.input-group{
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-right: 10px;
-   padding-left: 20px;
-   border-radius: 50px;
-   
+#submitError{
+    color: red;
+}
+
+
+@media  (min-width:300px) and (max-width: 450px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .container img {
+       display: none;
+    }
+
+    main {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .container img {
+       display: none;
+    }
+
+    main {
+        width: 80%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .auth-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    button {
+        width: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .container img {
+        width: 50%;
+        margin-left: 40px;
+    }
+
+    main {
+        width: 70%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .auth-buttons {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    button {
+        width: auto;
+    }
 }

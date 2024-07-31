@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-     <div class="logo">Workflow</div>
+    <div class="logo">Workflow</div>
     <header>
-       
-        <nav>
-            <a href="signup.html">Sign up</a>
-           <a href="Login.html">Log in</a>
-           
-        </nav>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
     </header>
 
     
@@ -24,23 +22,26 @@
 <main>
  <h2>Log in to continue</h2>
 <div class="input-group">
-    <label>Email Id</label>
-    <input type="tel" placeholder=" Enter Email " id="contact-email" onkeyup="validateEmail()">
-    <span id="email-error"></span>
+    <input type="tel" placeholder=" Email " id="contact-email" onkeyup="validateEmail()">
+    <span id="email-error"  style="color: red;"></span>
 </div>
     <div class="input-group">
-        <label>Password</label>
-        <input type="text" placeholder="Password" id="contact-name" onkeyup="validateName()">
-        <span id="password-error"></span>
+        <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
+        <span id="password-error"  style="color: red;"></span>
     </div>
 
-    <a href="index.html">Login</a>
-   <h5>Or log in with</h5>
-   <i class="fas fa-google"></i>
-<!-- <a href="https://www.google.com"></a> -->
+ <p>Forgot your password?  <a href="#">Reset</a></p>
+ <p>Or login with</p>
+<i class="fas fa-google"></i>
+<a href="https://www.google.com"></a>
+<br>
+<a href="index.html"><button>Login</button></a>
+
+    <p>New to Workflow?  <a href="signup.html">Register</p>
+   
 
 
 </main>
-
+<script src="JS/login.js"></script>
 </body>
 </html>

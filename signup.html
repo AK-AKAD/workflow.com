@@ -5,53 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="css/signup.css">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
 </head>
 <body>
             <div class="logo">Workflow</div>
     <header>
-
-        <nav>
-            <a href="signup.html">Sign up</a>
-           <a href="Login.html">Log in</a>
-        </nav>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
     </header>
         
     <div class="container">
+        
         
            <img src="logos.jpg" alt="Display picture">
            <main>
 
              <h2>Create your account</h2>
             <div class="input-group">
-                <label>First Name</label>
                 <input type="text" placeholder="First name" id="contact-name" onkeyup="validateName()">
-                <span id="name-error"></span>
+                <span id="name-error" style="color: red;"></span>
             </div>
             <div class="input-group">
-                <label>Last Name</label>
-                <input type="text" placeholder="Last name" id="contact-name" onkeyup="validateName()">
-                <span id="name-error"></span>
+               <input type="text" placeholder="Last name" id="last-name" onkeyup="validateLastName()">
+                <span id="lastName-error" style="color: red;"></span>
             </div>
             <div class="input-group">
-                <label>Email Id</label>
-                <input type="tel" placeholder=" Enter Email " id="contact-email" onkeyup="validateEmail()">
-                <span id="email-error"></span>
+             <input type="tel" placeholder="Email " id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error" style="color: red;"></span>
             </div>
             <div class="input-group">
-                <label>Password</label>
-                <input type="text" placeholder="Password" id="contact-password" onkeyup="validatePassword()">
-                <span id="password-error"></span>
+                <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
+                <span id="password-error" style="color: red;"></span>
             </div>
             <div class="input-group">
-                <label>Confirm Password</label>
-                <input type="text" placeholder="Confirm password" id="contact-password" onkeyup="validatePassword()">
-                <span id="password-error"></span>
+                 <input type="text" placeholder="Confirm password" id="confirm-password" onkeyup="validateConPassword()">
+                <span id="conPassword-error" style="color: red;"></span>
             </div>
             
             <p>By signing up, you're agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
 
-<button onclick="return validateForm()">Sign Up</button>
+ <a href="index.html"><button>Sign up</button></a>
 <p>Joined us before? <a href="Login.html">Login</a></p>
 
 
@@ -61,6 +55,6 @@
             
          </div>
 
-
+<script src="JS/login.js"></script>
 </body>
 </html>
