@@ -22,6 +22,7 @@
            <main>
 
              <h2>Create your account</h2>
+<<<<<<< Updated upstream
             <div class="input-group">
                 <input type="text" placeholder="First name" id="contact-name" onkeyup="validateName()">
                 <span id="name-error" style="color: red;"></span>
@@ -47,12 +48,44 @@
 
  <a href="index.html"><button>Sign up</button></a>
 <p>Joined us before? <a href="Login.html">Login</a></p>
+=======
+             <form class="form" method="POST" action="signup.php">
 
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input name="firstName" type="text" placeholder="First name" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input name="lastName" type="text" placeholder="Last name" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
+                <div class="input-group">
+                    <label>Email Id</label>
+                    <input name="email" type="tel" placeholder=" Enter Email " id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input name="passw" type="text" placeholder="Password" id="contact-password" onkeyup="validatePassword()">
+                    <span id="password-error"></span>
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input name="Cpassw" type="text" placeholder="Confirm password" id="contact-password" onkeyup="validatePassword()">
+                    <span id="password-error"></span>
+                </div>
+                
+                <p>By signing up, you're agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
+>>>>>>> Stashed changes
+
+                <button type="submit" onclick="return validateForm()">Sign Up</button>
+                <p>Joined us before? <a href="Login.html">Login</a></p>
+            </form>
 
            </main>
-           
-           
-            
+             
          </div>
 
 <script src="JS/login.js"></script>

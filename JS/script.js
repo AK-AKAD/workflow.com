@@ -45,3 +45,9 @@ function addProject() {
         alert("Please fill all fields");
     }
 }
+
+// run the php script for the page 
+windows.onload = function(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'index.php', true);
+}

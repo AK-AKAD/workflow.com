@@ -21,6 +21,7 @@
 <img src="logos.jpg" alt="picture">
 <main>
  <h2>Log in to continue</h2>
+<<<<<<< Updated upstream
 <div class="input-group">
     <input type="tel" placeholder=" Email " id="contact-email" onkeyup="validateEmail()">
     <span id="email-error"  style="color: red;"></span>
@@ -39,6 +40,27 @@
 
     <p>New to Workflow?  <a href="signup.html">Register</p>
    
+=======
+
+ <form class="form" method="POST" action="login.php">
+    <div class="input-group">
+        <label>Email Id</label>
+        <input name="email" type="tel" placeholder=" Enter Email " id="contact-email" onkeyup="validateEmail()">
+        <span id="email-error"><?php echo $emailError></span>
+    </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input name="passw" type="text" placeholder="Password" id="contact-name" onkeyup="validateName()">
+            <span id="password-error"><?php echo $passwError> </span>
+        </div>
+
+        <button type="submit" class="button"></button>
+    <h5>Or log in with</h5>
+    <i class="fas fa-google"></i>
+</form>
+    <span><?php echo $loginError></span>
+<!-- <a href="https://www.google.com"></a> -->
+>>>>>>> Stashed changes
 
 
 </main>

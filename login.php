@@ -1,35 +1,37 @@
 <?php
 
-
-$servername = "localhost";
-$serverUser = "root";
-$serverPassw = "root";
-$loginError = $usernameError = $passwError = $success = "";
+$loginError = $emailError = $passwError = $success = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    if(empty($_POST["username"])){
-        $usernameError = "username is required";
+    if(empty($_POST["email"])){
+        $emailError = "email is required";
+
     }elseif(empty($_POST["passw"])){
-        $passwerror = "Password is required";
+        $passwError = "Password is required";
+
     }else{
-        validate($_POST["username"], $_POST["passw"]);
+        validate($_POST["email"], $_POST["passw"]);
     }
 }
 
 function validate($username, $passw){
+    try{
+        $servername = "mysql:host=localhost;dbname=personal";
+        $serverUser = "root";
+        $serverPassw = "akinoluwaIS19";
+        $pdo = new PDO($servername, $serverUser, $serverPassw);
+        $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $conn = mysqli_connect($servername, $serverUser, $serverPassw);
+        $stmt = $pdo->prepare("SELECT * FROM userTable WHERE username = :username AND passw = :passw");
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':passw', $passw, PDO::PARAM_STR);
 
-    if(!$conn){
-        die("connection failure ".mysqli_connect_error());
-    }
+        $stmt->execute();
 
-    $sql = "SELECT* FROM user WHERE username = $username AND passw = $passw;";
-
-    if(mysqli_query($conn, $sql)){
-        $success = "Login successful";
-    }else{
-        $loginError = "Login error";
+        header('Location: index.html');
+        exit();
+    }catch(PDOException $e){
+        $loginError = $e->getMessage();
     }
 }
