@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist</title>
-    <link rel="stylesheet" href="css/checklist.css">
-</head>
-<body>
-    <header>
-        <div>
-        <h2>Workflow</h2>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="inbox.html">Inbox</a>
-                
-            </nav>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checklist</title>
+        <link rel="stylesheet" href="css/checklist.css">
+        <link rel="stylesheet" href="css/navbar.css">
+    </head>
+    <body>
         
-            <main>
-                <section class="checklists">
-                    <h1>Checklists</h1>
-                    <div class="filter">
-                        <input type="text" placeholder="Search...">
-                        <button>Filter</button>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Assignees</th>
-                                <th>Activity</th>
-                                <th>Due</th>
-                                <th>Status</th>
-                                <th>Overdue Tasks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Akin</td>
-                                <td>Backend Developer</td>
-                                <td>2 days ago</td>
-                                <td>Aug 10</td>
-                                <td class="status due-soon">Due soon</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Mmesoma</td>
-                                <td>Frontend Developer</td>
-                                <td>2 days ago</td>
-                                <td>Aug 20</td>
-                                <td class="status on-track">On-Track</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Olamide</td>
-                                <td>Project Manager</td>
-                                <td>2 days ago</td>
-                                <td>Aug 10</td>
-                                <td class="status due-soon">Due soon</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </main>
-            <script src="JS/checklist.js"></script>
-        </body>
-        </html>
-
+        <header>
+            <div class="logo-link">
+                <h1>Workflow</h1>
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="inbox.html">Inbox</a>
+                    <a href="checklist.html">Checklist</a>
+                </nav>
+            </div>
+            <div>
+                <span>Product Designer</span>
+                <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+                <a href="profile.html">Profile</a>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div clazss="check">
+                <h1>Checklists</h1> 
+            </div>
+            <div class="results"></div>
+            <div class="filter">
+                <input type="text" placeholder="Search...">
+                <button class="filter-button">Filter</button>
+            </div>
+            
+            <div class="checklist">
+                <table id="checklistTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Assignees</th>
+                            <th>Activity</th>
+                            <th>Due</th>
+                            <th>Status</th>
+                            <th>Overdue Tasks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable="true"> Yinka</td>
+                            <td contenteditable="true"> Designer</td>
+                            <td> 2days Ago</td>
+                            <td>  Aug 10</td>
+                            <td class="status" data-status="due-soon">
+                                Due soon 
+                                <div class="status-dropdown">
+                                    <div data-status="due-soon">
+                                        Due soon
+                                    </div>
+                                    <div data-status="on-track">
+                                        On-Track
+                                    </div>
+                                </div>
+                            </td>
+                            <td contenteditable="true"></td>
+                            <td><button class="delete-button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true"> Akin</td>
+                            <td contenteditable="true">Backend Developer</td>
+                            <td> 2days Ago</td>
+                            <td>  Aug 10</td>
+                            <td class="status" data-status="due-soon">Due soon <div class="status-dropdown"><div data-status="due-soon">Due soon</div><div data-status="on-track">On-Track</div></div></td>
+                            <td contenteditable="true"></td>
+                            <td><button class="delete-button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true"> Olamide</td>
+                            <td contenteditable="true"> Product Designer</td>
+                            <td>  2days Ago</td>
+                            <td> Aug 10</td>
+                            <td class="status" data-status="due-soon">Due soon <div class="status-dropdown"><div data-status="due-soon">Due soon</div><div data-status="on-track">On-Track</div></div></td>
+                            <td contenteditable="true"></td>
+                            <td><button class="delete-button">Delete</button></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <button style="width: 10%;" id="addRowButton">Add</button>
+            </div>
+        </div>
+        <script src="JS/checklist.js"></script>
+    </body>
+</html>

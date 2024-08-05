@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+    background-color: #fff;
+    border-bottom: 1px grey solid;
+}
+.logo-link{
+    display: flex;
+     align-items: center;
+      gap: 50px;
+}
+.links{
+    display: flex; 
+    align-items: center;
+     gap: 50px
+}
+.links a {
+    text-decoration: none;
+    color: black;
+}
+

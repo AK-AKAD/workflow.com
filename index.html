@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Management Dashboard</title>
     <link rel="stylesheet" href="css/styles.css">
-    
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <header>
-        <div>
+        <div class="logo-link">
             <h1>Workflow</h1>
-            <nav>
+            <nav class="links">
                 <a href="index.html">Home</a>
                 <a href="inbox.html">Inbox</a>
                 <a href="checklist.html">Checklist</a>
@@ -19,51 +19,52 @@
         </div>
         <div>
             <span>Product Designer</span>
-            <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
         </div>
     </header>
     <div class="container">
         <h2>Welcome Adeyinka!</h2>
         <div class="section">
-            <div class="box">
+            <div class="boxx">
                 <h3>Announcement</h3>
                 <table id="announcementTable">
-                    <tr>
-                        <th>Announcement</th>
-                        <th>Time</th>
-                        <th>Add</th>
-                    </tr>
-                    <tr>
+                    <div class="input-form">
+                        <button onclick="addAnnouncement()">Add</button>
+                        <input type="text" id="announcement" placeholder="Announcement">
+                        <input type="text" id="time" placeholder="Time">
+                        <input type="text" id="add" placeholder="Add">
+                        
+                    </div>
+                    <tr contenteditable="true">
                         <td>New Travel Policy</td>
                         <td>2m</td>
                         <td>12</td>
                     </tr>
-                    <tr>
+                    <tr contenteditable="true">
                         <td>Welcome onboard Tolu!</td>
                         <td>5m</td>
                         <td>17</td>
                     </tr>
-                    <tr>
+                    <tr contenteditable="true">
                         <td>New Travel Policy</td>
-                        <td>2m</td>
+                       <!-- <td>  <span id="hrs">00</span></td>
+                        
+                        <td> <span id="mins">00</span></td> -->
+                        
+                        <!-- <input type="time" placeholder=""> -->
                         <td>12</td>
                     </tr>
                 </table>
-                <div class="input-form">
-                    <input type="text" id="announcement" placeholder="Announcement">
-                    <input type="text" id="time" placeholder="Time">
-                    <input type="text" id="add" placeholder="Add">
-                    <button onclick="addAnnouncement()">Add</button>
-                </div>
+                
             </div>
             <div class="box">
                 <h3>My Shortcuts</h3>
                 <div class="shortcuts">
-                    <div class="shortcut-item">My Tasks</div>
-                    <div class="shortcut-item">My Events</div>
-                    <div class="shortcut-item">My logged time</div>
-                    <div class="shortcut-item">My Activities</div>
-                    <div class="shortcut-item">Bookmarks</div>
+                    <div class="shortcut-item">Tasks</div>
+                    <div class="shortcut-item">Events</div>
+                    <div class="shortcut-item">logged time</div>
+                    <div class="shortcut-item">Add User</div>
                 </div>
             </div>
         </div>
@@ -76,17 +77,17 @@
                         <th>Start Date</th>
                         <th>End Date</th>
                     </tr>
-                    <tr>
+                    <tr contenteditable="true">
                         <td>Landing Page Redesign</td>
                         <td>1 May</td>
                         <td>1 Sept</td>
                     </tr>
-                    <tr>
+                    <tr contenteditable="true">
                         <td>Landing Page Redesign</td>
                         <td>1 May</td>
                         <td>1 Sept</td>
                     </tr>
-                    <tr>
+                    <tr contenteditable="true">
                         <td>Landing Page Redesign</td>
                         <td>1 May</td>
                         <td>1 Sept</td>
@@ -115,6 +116,16 @@
             </div>
         </div>
     </div>
+    <script>
+        let hrs = document.getElementById("hrs");
+        let mins = document.getElementById("mins");
+
+        setInterval(() => {
+            let currentTime = new Date();
+            hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours() ;
+            mins.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes() ;
+            }), 60000;
+    </script>
   <script src="JS/script.js"></script>
 </body>
 </html>

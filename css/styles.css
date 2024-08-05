@@ -2,27 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-header h1 {
-    margin: 0;
-}
-nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #000;
 }
 .container {
     padding: 20px;
 }
+
 h2 {
     color: #333;
 }
@@ -33,6 +17,14 @@ h2 {
 }
 .section .box {
     background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 48%;
+}
+.section .boxx{
+    background: #F6E696;
+    /* background-color: #fff; */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -67,5 +59,12 @@ th {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
+}
+#hrs::after{
+    content: 'hrs';
+}
+
+#mins::after{
+    content: 'ms';
 }
 
