@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-link">
+                <h1>Workflow</h1>
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="inbox.html">Inbox</a>
+                    <a href="checklist.html">Checklist</a>
+                </nav>
+            </div>
+            <div>
+                <span>Product Designer</span>
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <aside class="sidebar">
+                <h2>Profile</h2>
+                <ul>
+                    <li class="active">Account Information</li>
+                    <li>Reset Password</li>
+                    <li>Invite a friend</li>
+                </ul>
+                <button class="logout">Logout</button>
+            </aside>
+            <section class="profile-section">
+                <div class="profile-image">
+                    <img id="profilePic" src="image.png" alt="Profile Image">
+                </div>
+                <form class="profile-form" onsubmit="return false;">
+                    <label for="profileImage">Upload Picture</label>
+                    <input type="file" id="profileImage" name="profileImage" accept="image/*" onchange="loadFile(event)">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <label for="role">Role</label>
+                    <input type="text" id="role" name="role">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio"></textarea>
+                    <button type="submit">Save</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="JS/profile.js"></script>
+</body>
+</html>
