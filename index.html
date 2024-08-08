@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management Dashboard</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -24,108 +25,101 @@
         </div>
     </header>
     <div class="container">
-        <h2>Welcome Adeyinka!</h2>
-        <div class="section">
-            <div class="boxx">
-                <h3>Announcement</h3>
-                <table id="announcementTable">
-                    <div class="input-form">
-                        <button onclick="addAnnouncement()">Add</button>
-                        <input type="text" id="announcement" placeholder="Announcement">
-                        <input type="text" id="time" placeholder="Time">
-                        <input type="text" id="add" placeholder="Add">
-                        
+        <h1>Welcome Adeyinka!</h1>
+        <div class="dashboard">
+            <div class="cardannouncement">
+                <div class="card-header">
+                    <h2><i class="fas fa-bullhorn"></i> Announcement</h2>
+                    <button class="add-button">Add</button>
+                </div>
+                <ul class="announcement-list">
+                    <li contenteditable="true">
+                        <span>New Travel Policy</span>
+                        <span title="time">2ms</span>
+                        <span>12</span>
+                    </li>
+                    <li contenteditable="true">
+                        <span>Welcome Tolu to the team!</span>
+                        <span>3ms</span>
+                        <span>17</span>
+                    </li>
+                    <li contenteditable="true">
+                        <span>General meeting at 7pm</span>
+                        <span>12ms</span>
+                        <span>17</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card shortcuts">
+                <div class="card-header">
+                    <h2><i class="fas fa-chevron-right"></i> My Shortcuts</h2>
+                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
+                </div>
+                <div class="shortcuts-list">
+                    <div class="shortcut">
+                        <i class="fas fa-tasks"></i> Tasks
                     </div>
-                    <tr contenteditable="true">
-                        <td>New Travel Policy</td>
-                        <td>2m</td>
-                        <td>12</td>
-                    </tr>
-                    <tr contenteditable="true">
-                        <td>Welcome onboard Tolu!</td>
-                        <td>5m</td>
-                        <td>17</td>
-                    </tr>
-                    <tr contenteditable="true">
-                        <td>New Travel Policy</td>
-                       <!-- <td>  <span id="hrs">00</span></td>
-                        
-                        <td> <span id="mins">00</span></td> -->
-                        
-                        <!-- <input type="time" placeholder=""> -->
-                        <td>12</td>
-                    </tr>
-                </table>
+                    <div class="shortcut">
+                        <i class="fas fa-calendar-alt"></i> Events
+                    </div>
+                    <div class="shortcut">
+                        <i class="fas fa-clock"></i> Logged time
+                    </div>
+                    <div class="shortcut">
+                        <i class="fas fa-user-plus"></i> Add User
+                    </div>
+                </div>
+            </div>
+            <div class="card projects">
+                <div class="card-header">
+                    <h2><i class="fa fa-file-text"></i> My Projects</h2>
+                    <div class="tabs">
+                        <div class="tab active">Recent</div>
+                        <div class="tab">Starred</div>
+                    </div>  
+                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
+                </div>
                 
-            </div>
-            <div class="box">
-                <h3>My Shortcuts</h3>
-                <div class="shortcuts">
-                    <div class="shortcut-item">Tasks</div>
-                    <div class="shortcut-item">Events</div>
-                    <div class="shortcut-item">logged time</div>
-                    <div class="shortcut-item">Add User</div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="box">
-                <h3>My Projects</h3>
-                <table id="projectsTable">
-                    <tr>
-                        <th>Title</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                    </tr>
-                    <tr contenteditable="true">
-                        <td>Landing Page Redesign</td>
-                        <td>1 May</td>
-                        <td>1 Sept</td>
-                    </tr>
-                    <tr contenteditable="true">
-                        <td>Landing Page Redesign</td>
-                        <td>1 May</td>
-                        <td>1 Sept</td>
-                    </tr>
-                    <tr contenteditable="true">
-                        <td>Landing Page Redesign</td>
-                        <td>1 May</td>
-                        <td>1 Sept</td>
-                    </tr>
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr contenteditable="true">
+                            <td>Landing Page Redesign</td>
+                            <td>1 May</td>
+                            <td>1 Sept</td>
+                        </tr>
+                        <tr contenteditable="true">
+                            <td>Landing Page Redesign</td>
+                            <td>1 May</td>
+                            <td>1 Sept</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <div class="input-form">
-                    <input type="text" id="title" placeholder="Title">
-                    <input type="text" id="startDate" placeholder="Start Date">
-                    <input type="text" id="endDate" placeholder="End Date">
-                    <button onclick="addProject()">Add</button>
-                </div>
+                <button class="ad-button">Add</button>
             </div>
-            <div class="box">
-                <h3>Agenda</h3>
-                <table>
-                    <tr>
-                        <th>Agenda</th>
-                        <th>Overdue</th>
-                        <th>Today</th>
-                        <th>Upcoming</th>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                </table>
+            <div class="card agenda">
+                <div class="card-header">
+                    <h2><i class="fas fa-calendar-check"></i> Agenda</h2>
+                        <div class="tabs">
+                        <div class="tab active">Today</div>
+                        <div class="tab">Overdue</div>
+                        <div class="tab">Upcoming</div>
+                    </div>
+                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
+                </div>
+                
+                <div class="agenda-content">
+                    <p>Agenda items here</p>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        let hrs = document.getElementById("hrs");
-        let mins = document.getElementById("mins");
-
-        setInterval(() => {
-            let currentTime = new Date();
-            hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours() ;
-            mins.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes() ;
-            }), 60000;
-    </script>
-  <script src="JS/script.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

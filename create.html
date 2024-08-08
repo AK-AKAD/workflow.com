@@ -16,20 +16,28 @@
                         <button class="signup-btn">Sign up</button>
                     </div>
             </header>
-        <div class="create">
-        
-            <h2>Create a workflow space</h2>
+        <div id="modalBtn" class="create">
+         <h2>Create a workflow space</h2>
             <div class="create-workspace">
                 <button class="create-button">
                     <i class="fas fa-plus"></i>
                     Create a new Work Space
                 </button>
+<div id="simpleModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <h2>Create a workflow space</h2>
+        <h4>Give your workspace a name</h4>
+       <p> Name: <input type="text"></p>
+       <button class="go">Continue</button>
+    </div>
+</div>
             </div>
                 <p class="join-text">Or join an existing work space</p>
                 <button class="contd">continue</button>
         </div>       
     
     </div>
-    
+    <script src="JS/create.js"></script>
 </body> 
 </html>
