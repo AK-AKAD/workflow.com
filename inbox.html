@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inbox</title>
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/inbox.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <header>
@@ -19,65 +19,112 @@
         </div>
         <div>
             <span>Product Designer</span>
-                <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
             <a href="profile.html">Profile</a>
         </div>
     </header>
-    <div class="container">
-        <div class="inbox">
-            <div class="header">
-                <h3>Inbox</h3>
+    <main>
+        <aside>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search">
+                <button id="searchBtn">Search</button>
             </div>
-            <div class="search-area">
-                <input/>
-                <button>Search</button>
+            <div class="tab-menu">
+                <button class="active" data-tab="inbox">Inbox</button>
+                <button data-tab="drafts">Drafts</button>
+                <button data-tab="sent">Sent</button>
+                <button data-tab="junk">Junk</button>
+                <button data-tab="archive">Archive</button>
             </div>
-
-            <div class="inbox-content">
-                <div class="inbox-tabs">
-                     <span>Inbox</span>
-                     <span>Drafts</span>
-                     <span>Sent</span>
-                     <span>Junk</span>
-                     <span>Archive</span>
-                </div>
-                <div class="messages">
-                    <div class="inbox-message">
-                        <div ></div>
-                        <div class="message">
-                            <div class="name-date">
-                                <li>Akin</li>
-                                <p>16:20</p>
-                            </div>
-                            <p class="msg">message</p>
-                        </div>
+            <ul id="inbox" class="message-list active">
+                <li class="message-item unread">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Akin</span>
+                        <span class="time">16:09</span>
+                        <p>Have you received the request I sent to your...</p>
                     </div>
-                    <div class="inbox-message">
-                        <div></div>
-                        <div class="message">
-                            <div class="name-date">
-                                <p>Akin</p>
-                                <p>16:20</p>
-                            </div>
-                            <p class="msg">message</p>
-                        </div>
+                </li>
+                <li class="message-item unread">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Akin</span>
+                        <span class="time">16:09</span>
+                        <p>Have you received the request I sent to your...</p>
                     </div>
-                    <div class="inbox-message">
-                        <div></div>
-                        <div class="message">
-                            <div class="name-date">
-                                <p>Akin</p>
-                                <p>16:20</p>
-                            </div>
-                            <p class="msg">message</p>
-                        </div>
+                </li>
+                <li class="message-item read">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Akin</span>
+                        <span class="time">16:09</span>
+                        <p>Have you received the request I sent to your...</p>
                     </div>
-                </div>
+                </li>
+            </ul>
+            <ul id="drafts" class="message-list">
+                <li class="message-item">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Draft Message</span>
+                        <span class="time">--:--</span>
+                        <p>Your draft message...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul id="sent" class="message-list">
+                <li class="message-item">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Sent Message</span>
+                        <span class="time">--:--</span>
+                        <p>Your sent message...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul id="junk" class="message-list">
+                <li class="message-item">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Junk Message</span>
+                        <span class="time">--:--</span>
+                        <p>Your junk message...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul id="archive" class="message-list">
+                <li class="message-item">
+                    <div class="status-dot"></div>
+                    <div class="message-info">
+                        <span class="sender">Archived Message</span>
+                        <span class="time">--:--</span>
+                        <p>Your archived message...</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <section class="email-view">
+            <div class="email-header">
+                <p><strong>From :</strong> Akin@workflow.com</p>
+                <p><strong>To :</strong> yinka@workflow.com</p>
+                <p><strong>Today, 16:09</strong></p>
             </div>
-        </div>
-        <!-- <div class="inbox-content">
-            This is the inbox page.
-        </div> -->
-    </div>
+            <div class="email-content">
+                <h2>Github Request</h2>
+                <p>A GitHub request for a project has been sent to you. Click the button below to redirect you to your GitHub repository.</p>
+                <img src="github-logo.png" alt="GitHub">
+                <button>Github</button>
+            </div>
+            <div class="email-actions">
+                <button id="replyBtn">Reply</button>
+                <button id="deleteBtn">Delete</button>
+            </div>
+            <div class="email-reply hidden">
+                <textarea id="replyText" placeholder="Type your reply here..."></textarea>
+                <button id="sendReplyBtn">Send</button>
+            </div>
+        </section>
+    </main>
+    <script src="JS/inbox.js"></script>
 </body>
 </html>
