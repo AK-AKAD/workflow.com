@@ -1,58 +1,36 @@
-/* body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
 }
 
-.container {
+.main {
     display: grid;
-
     padding: 20px;
 }
 
-h1 {
+h2 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-}
+}       
 
-.dashboard {
-    gap: 30px;
-}           
-
-.cardannouncement {
+.announcements {
     background-color: #F6E696;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.card {
-    background-color: #fff;
 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card-header {
+.announcements-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.card-header h2 {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-.card-header i {
-    margin-right: 40px;
-}
-
-.add-button {
+#addAnnouncementBtn  {
     padding: 5px 10px;
     background-color: #513BA8;
     color: black;
@@ -61,7 +39,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.ad-button{
+#addProjectBtn {
     display: block;
     float: bottom;
     margin-top: 10px;
@@ -72,50 +50,51 @@ h1 {
     background: #513BA8;
     cursor: pointer;
 }
-.ad-button:hover{
+#addAnnouncementBtn:hover{
     background-color: darkviolet;
 }
-.add-button:hover {
+#addProjectBtn:hover {
     background-color: darkviolet;
 }
 
-.announcement-list {
+#announcement-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.announcement-list li {
+#announcement-list li {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.container {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    margin-top: 30px;
+.dashboard {
+   padding-bottom: 20px;
+    margin: 30px auto;
     background-color: white;
     border:1px solid #ccc;
     border-radius: 5px;
 }
-.projects-table {
-    display: flex;
-    width: 100%;
-    border-collapse: collapse;
-}
 
-.projects-table th, .projects-table td {
+#projectsTable th, .projectsTable td {
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-.projects-table th {
-    background-color: #f7f7f7;
+.dashboard .agenda {
+    display: grid;
+    grid-row: auto;
 }
 
+.agenda{
+    padding-bottom: 20px;
+    margin: 30px auto;
+    background-color: white;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
 .tabs {
     display: flex;
     gap: 10px;
@@ -142,9 +121,9 @@ h1 {
 
 .agenda-content {
     padding: 10px;
-} */
+}
 
-
+/* 
 
 
 body {
@@ -165,25 +144,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
- .projects, .agenda {
-display: inline-flex;
-justify-content: space-between;
-width: 40%;
-padding: 60px 20px;
-background-color: #ffffff;
-margin-bottom: 20px;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
+ 
 
-.announcements-header, .projects-header, .agenda-header {
+.announcements-header  {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.announcements-header button, .projects-header button {
+.announcements-header button {
     font-size: 18px;
     border: none;
     background-color: #333;
@@ -205,42 +175,70 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #ddd;
 }
 
+.dashboard {
+    display: inline-flex;
+    justify-content: space-between;
+   
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+
+     .projects {
+        background-attachment: red;
+        padding: 10px auto;
+        border-radius: 5px;
+     }
+
 .projects table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .projects table th, .projects table td {
-    padding: 10px;
+    padding: 10px auto;
     text-align: left;
     border-bottom: 1px solid #ddd;
-}
+} */
 
-.agenda-tabs {
+
+
+
+
+
+
+
+
+
+
+
+
+/* .agenda-tabs {
     display: flex;
     margin-bottom: 10px;
-}
+} */
 
-.agenda-tabs button {
+/* .agenda-tabs button {
     flex: 1;
     padding: 10px;
     border: none;
     cursor: pointer;
     background-color: #f4f4f4;
     margin-right: 5px;
-}
+} */
 
-.agenda-tabs button.active {
+/* .agenda-tabs button.active {
     background-color: #333;
     color: #fff;
-}
-
+} */
+/* 
 .agenda-tabs button:last-child {
     margin-right: 0;
-}
+} */
 
-#agendaContent {
+/* #agendaContent {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 4px;
-}
+} */

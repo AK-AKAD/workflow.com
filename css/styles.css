@@ -96,6 +96,11 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
 }
+.shortcut a{
+color: black;
+} 
+
+
 
 .shortcut {
     padding: 10px;

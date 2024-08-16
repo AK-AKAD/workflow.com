@@ -137,7 +137,7 @@
                 <h3>📢 Announcement</h3>
                 <button id="addAnnouncementBtn">Add</button>
             </div>
-            <ul id="announcementList">
+            <ul id="announcement-List">
                 <li>
                     <span>New Travel Policy</span>
                     <span>2ms</span>
@@ -152,14 +152,14 @@
                 </li>
             </ul>
         </section>
-        <section class="dashboard">
+        <div class="dashboard">
             <div class="projects">
                 <div class="projects-header">
                     <h3>📄 My Projects</h3>
                     <button id="addProjectBtn">Add</button>
                 </div>
                 <table>
-                    <thead>
+                    <thead id="projectsTable">
                         <tr>
                             <th>Title</th>
                             <th>Start Date</th>
@@ -175,21 +175,22 @@
                     </tbody>
                 </table>
             </div>
-            <div class="agenda">
-                <div class="agenda-header">
-                    <h3>📅 Agenda</h3>
+        </div>    
+                <div class="agenda">
+                    <div class="agenda-header">
+                        <h3>📅 Agenda</h3>
+                    </div>
+                    <div class="agenda-tabs">
+                        <button class="active" data-tab="today">Today</button>
+                        <button data-tab="overdue">Overdue</button>
+                        <button data-tab="upcoming">Upcoming</button>
+                    </div>
+                    <div id="agendaContent">
+                        <!-- Agenda content goes here -->
+                        <p>No agenda items for today.</p>
+                    </div>
                 </div>
-                <div class="agenda-tabs">
-                    <button class="active" data-tab="today">Today</button>
-                    <button data-tab="overdue">Overdue</button>
-                    <button data-tab="upcoming">Upcoming</button>
-                </div>
-                <div id="agendaContent">
-                    <!-- Agenda content goes here -->
-                    <p>No agenda items for today.</p>
-                </div>
-            </div>
-        </section>
+            
     </main>
     <script src="JS/user.js"></script>
 </body>
