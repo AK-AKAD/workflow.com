@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Search</title>
+    <link rel="stylesheet" href="css/finduser.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-link">
+            <h1>Workflow</h1>
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
+        </div>
+    </header>
+
+    <div class="container">
+            <div class="ariel">
+                <header>
+                    
+                    <h1><i class="fa fa-arrow-left"></i> Users</h1>
+                    <p>Find new users and add them to the team</p>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search users..." id="user-search">
+                        <button id="search-button">Find</button>
+                    </div>
+                </header>
+            </div>
+        <div class="user-list">
+            <h2>Users</h2>
+            <ul id="users">
+                <!-- User items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="JS/finduser.js"></script>
+</body>
+</html>

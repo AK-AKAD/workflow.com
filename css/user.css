@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.main {
+    display: grid;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}       
+
+.announcements {
+    background-color: #F6E696;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.announcements-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#addAnnouncementBtn  {
+    padding: 5px 10px;
+    background-color: #513BA8;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#addProjectBtn {
+    display: block;
+    float: bottom;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background: #513BA8;
+    cursor: pointer;
+}
+#addAnnouncementBtn:hover{
+    background-color: darkviolet;
+}
+#addProjectBtn:hover {
+    background-color: darkviolet;
+}
+
+#announcement-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#announcement-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.dashboard {
+   padding-bottom: 20px;
+    margin: 30px auto;
+    background-color: white;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+
+#projectsTable th, .projectsTable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dashboard .agenda {
+    display: grid;
+    grid-row: auto;
+}
+
+.agenda{
+    padding-bottom: 20px;
+    margin: 30px auto;
+    background-color: white;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    padding-left: 30%;
+}
+
+.tab {
+    padding: 5px 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #513BA8;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #513BA8;
+}
+
+.agenda-content {
+    padding: 10px;
+}
+
+/* 
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.welcome-section {
+    text-align: center;
+}
+.announcements{
+    background-color: #F6E696;
+    padding: 20px;
+     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ 
+
+.announcements-header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.announcements-header button {
+    font-size: 18px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.announcements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard {
+    display: inline-flex;
+    justify-content: space-between;
+   
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+
+     .projects {
+        background-attachment: red;
+        padding: 10px auto;
+        border-radius: 5px;
+     }
+
+.projects table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects table th, .projects table td {
+    padding: 10px auto;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .agenda-tabs {
+    display: flex;
+    margin-bottom: 10px;
+} */
+
+/* .agenda-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    margin-right: 5px;
+} */
+
+/* .agenda-tabs button.active {
+    background-color: #333;
+    color: #fff;
+} */
+/* 
+.agenda-tabs button:last-child {
+    margin-right: 0;
+} */
+
+/* #agendaContent {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+} */

@@ -1,0 +1,197 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-link">
+            <h1>Workflow</h1>
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
+        </div>
+    </header>
+   
+        <h1>Welcome Adeyinka!</h1>
+        <div class="dashboard">
+            <div class="cardannouncement">
+                <div class="card-header">
+                    <h2><i class="fas fa-bullhorn"></i> Announcement</h2>
+                    <button class="add-button">Add</button>
+                </div>
+                <ul class="announcement-list">
+                    <li contenteditable="true">
+                        <span>New Travel Policy</span>
+                        <span title="time">2ms</span>
+                        <span>12</span>
+                    </li>
+                    <li contenteditable="true">
+                        <span>Welcome Tolu to the team!</span>
+                        <span>3ms</span>
+                        <span>17</span>
+                    </li>
+                    <li contenteditable="true">
+                        <span>General meeting at 7pm</span>
+                        <span>12ms</span>
+                        <span>17</span>
+                    </li>
+                </ul>
+            </div>
+        </div>       
+             <div class="container">
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <button class="ad-button">Add</button> -->
+                        <!-- <tr contenteditable="true">
+                            <td>Landing Page Redesign</td>
+                            <td>1 May</td>
+                            <td>1 Sept</td>
+                        </tr>
+                        <tr contenteditable="true">
+                            <td>Landing Page Redesign</td>
+                            <td>1 May</td>
+                            <td>1 Sept</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            
+                <div class="card-agenda">
+                    <div class="card-header">
+                        <h2><i class="fas fa-calendar-check"></i> Agenda</h2>
+                            <div class="tabs">
+                            <div class="tab active">Today</div>
+                            <div class="tab">Overdue</div>
+                            <div class="tab">Upcoming</div>
+                    </div>
+                        <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
+                        
+                        
+                        <div class="agenda-content">
+                            <p>Agenda items here</p>
+                        </div>    
+                </div>
+            </div>
+    <script src="JS/user.js"></script>
+</body>
+</html> --> -->
+
+
+
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Dashboard</title>
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <header>
+        <div class="logo-link">
+            <h1>Workflow</h1>
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
+        </div>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h2>Welcome Adeyinka!</h2>
+        </section>
+        <section class="announcements">
+            <div class="announcements-header">
+                <h3>📢 Announcement</h3>
+                <button id="addAnnouncementBtn">Add</button>
+            </div>
+            <ul id="announcement-List">
+                <li>
+                    <span>New Travel Policy</span>
+                    <span>2ms</span>
+                </li>
+                <li>
+                    <span>Welcome Tolu to the team!</span>
+                    <span>3ms</span>
+                </li>
+                <li>
+                    <span>General meeting at 7pm</span>
+                    <span>12ms</span>
+                </li>
+            </ul>
+        </section>
+        <div class="dashboard">
+            <div class="projects">
+                <div class="projects-header">
+                    <h3>📄 My Projects</h3>
+                    <button id="addProjectBtn">Add</button>
+                </div>
+                <table>
+                    <thead id="projectsTable">
+                        <tr>
+                            <th>Title</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projectsTable">
+                        <tr>
+                            <td>Landing Page Redesign</td>
+                            <td>1 May</td>
+                            <td>1 Sept</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+                <div class="agenda">
+                    <div class="agenda-header">
+                        <h3>📅 Agenda</h3>
+                    </div>
+                    <div class="agenda-tabs">
+                        <button class="active" data-tab="today">Today</button>
+                        <button data-tab="overdue">Overdue</button>
+                        <button data-tab="upcoming">Upcoming</button>
+                    </div>
+                    <div id="agendaContent">
+                        <!-- Agenda content goes here -->
+                        <p>No agenda items for today.</p>
+                    </div>
+                </div>
+            
+    </main>
+    <script src="JS/user.js"></script>
+</body>
+</html>

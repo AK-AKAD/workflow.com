@@ -102,6 +102,15 @@ td {
     padding: 10px 20px;
     cursor: pointer;
 }
+#check {
+    background-color: #6c63ff;
+    color: white;
+    width: 15%;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 
 .delete-button {
     background-color: #ff6347;

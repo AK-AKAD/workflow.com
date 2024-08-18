@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <header>
+        <div class="logo-link">
+            <h1>Workflow</h1>
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Tasks</h2>
+        <p>Add a new Task and assign members to various tasks</p>
+        <button id="add-task-button" class="add-task-button">+ Add Task</button>
+        <table id="tasks-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Assignees</th>
+                    <th>Due</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing task rows will go here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="JS/task.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ariel header {
+    display: block;
+    /* gap: 10px; */
+    text-decoration: none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+    text-align: left;
+}
+
+header p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.user-list h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.user-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list li:last-child {
+    border-bottom: none;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details span {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
