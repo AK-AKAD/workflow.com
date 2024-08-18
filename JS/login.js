@@ -83,3 +83,32 @@ function validateForm(){
         return false;
     }
 }
+
+function signup(){
+    let fName = document.getElementById('contact-name').value;
+    let lName = document.getElementById('contact-last-name').value;
+    let email = document.getElementById('contact-email').value;
+    let passw = docuemnt.getElementById('contact-password').value;
+    let Cpassw = document.getElementById('confirm-password').value;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('POST', 'signup.php');
+    xhttp.send("firstName="+fName+"lastName="+lName+"email="+email+"passw="+passw+"Cpassw="+Cpassw);
+
+    window.location.href="Login.html";
+}
+
+function login(){
+    let email = document.getElementById('contact-email');
+    let passw = document.getElementById('contact-password');
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('POST', 'login.php');
+    xhttp.send("email="+email+"passw="+passw);
+
+    // create a function to check with the login was successful
+    // before sending user to the index
+    // and send error message to the html page
+    window.location.href='index.html';
+
+}

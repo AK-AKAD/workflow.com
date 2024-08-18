@@ -62,3 +62,40 @@ document.querySelectorAll('.delete-button').forEach(button => {
     });
 });
 addDropdownEventListeners();
+
+function xmlrequest(action, parameters, url){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open(action, 'checklist.php?'+url);
+    xhttp.send(parameters);
+
+    const data = xhttp.response;
+
+}
+// Get aleready added tasks from the database
+document.onload = () => {
+    xmlrequest('GET', '', 'tasks');
+
+/*
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'checklist.php');
+    xhttp.send();
+
+    const data = xhttp.response;
+    // Code to arrange data in tabular form
+    console.log(data);
+*/    
+}
+
+// upload new tasks onto the database
+document.getElementById('Task').addEventListener('Click', function(){
+
+    // Remove redudant information
+    xmlrequest('POST', 'Task='+Task+'Assignee='+Assignee+'Prj_Name='+Prj_Name+'Due-date='+Due-date+'Status='+Status,'insert');
+})
+
+// To update already existing tasks on the database
+// add an update button to the row to make this easier
+document.getElementById('update').addEventListener('Click', function(){
+    xmlrequest('POST', 'Task='+Task+'Assignee='+Assignee+'Prj_Name='+Prj_Name+'Due-date='+Due-date+'Status='+Status, 'update')
+})
+

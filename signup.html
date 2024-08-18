@@ -23,33 +23,6 @@
         <main>
 
              <h2>Create your account</h2>
-<<<<<<< Updated upstream
-            <div class="input-group">
-                <input type="text" placeholder="First name" id="contact-name" onkeyup="validateName()">
-                <span id="name-error" style="color: red;"></span>
-            </div>
-            <div class="input-group">
-               <input type="text" placeholder="Last name" id="last-name" onkeyup="validateLastName()">
-                <span id="lastName-error" style="color: red;"></span>
-            </div>
-            <div class="input-group">
-             <input type="tel" placeholder="Email " id="contact-email" onkeyup="validateEmail()">
-                <span id="email-error" style="color: red;"></span>
-            </div>
-            <div class="input-group">
-                <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
-                <span id="password-error" style="color: red;"></span>
-            </div>
-            <div class="input-group">
-                 <input type="text" placeholder="Confirm password" id="confirm-password" onkeyup="validateConPassword()">
-                <span id="conPassword-error" style="color: red;"></span>
-            </div>
-            
-            <p>By signing up, you're agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
-
-            <a href="Login.html"><button>Sign up</button></a>
-            <p>Joined us before? <a href="Login.html">Login</a></p>
-=======
              <form class="form" method="POST" action="signup.php">
 
                 <div class="input-group">
@@ -59,7 +32,7 @@
                 </div>
                 <div class="input-group">
                     <label>Last Name</label>
-                    <input name="lastName" type="text" placeholder="Last name" id="contact-name" onkeyup="validateName()">
+                    <input name="lastName" type="text" placeholder="Last name" id="contact-last-name" onkeyup="validateName()">
                     <span id="name-error"></span>
                 </div>
                 <div class="input-group">
@@ -74,14 +47,13 @@
                 </div>
                 <div class="input-group">
                     <label>Confirm Password</label>
-                    <input name="Cpassw" type="text" placeholder="Confirm password" id="contact-password" onkeyup="validatePassword()">
+                    <input name="Cpassw" type="text" placeholder="Confirm password" id="confirm-password" onkeyup="validatePassword()">
                     <span id="password-error"></span>
                 </div>
                 
                 <p>By signing up, you're agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
->>>>>>> Stashed changes
 
-                <button type="submit" onclick="return validateForm()">Sign Up</button>
+                <button type="submit" onclick="return validateForm()" onClick="signup()">Sign Up</button>
                 <p>Joined us before? <a href="Login.html">Login</a></p>
             </form>
 

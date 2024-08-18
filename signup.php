@@ -17,11 +17,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }elseif($POST["passw"] != $POST["Cpassww"]){
         $CpasswError = "password doesn't match";
     }else{
-        signup($POST["firstName"], $POST["lastName"], $POST["email"], $POST["passw"]);
+        signup($pdo, $POST["firstName"], $POST["lastName"], $POST["email"], $POST["passw"]);
     }
 }
 
-function signup($firstName, $lastName, $email, $Upassw){
+function signup($pdo, $firstName, $lastName, $email, $Upassw){
     try{
         $stmt = $pdo->prepare("INSERT INTO userTable (firstName, lastName, email, passw) VALUES(:firstName, :lastName, :email, :passw)");
         $stmt->bindParam(":username", $firstName, PDO::PARAM_STR);
