@@ -17,10 +17,10 @@ document.getElementById('addRowButton').addEventListener('click', function() {
     statusCell.setAttribute('contenteditable', 'true');
     overdueTasksCell.setAttribute('contenteditable', 'true');
 
-    statusCell.classList.add('status'); // Change class based on status
+    statusCell.classList.add('status'); 
     statusCell.setAttribute('data-status', 'on-track');
     statusCell.innerHTML = 'Due-soon <div class="status-dropdown"><div data-status="due-soon">Due soon</div><div data-status="on-track">On-Track</div></div>';
-// Initial value, can be edited
+
 
     let deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';

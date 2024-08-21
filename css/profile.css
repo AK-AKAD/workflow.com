@@ -110,7 +110,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-/* @media (min-width:375px) and (max-width: 498px){
+@media (min-width:375px) and (max-width: 498px){
     .sidebar {
         position: absolute;
         top: 0;
@@ -137,4 +137,4 @@ body {
     padding: 20px;
     overflow-y: auto;
    }
-} */
+}
