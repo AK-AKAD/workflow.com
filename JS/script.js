@@ -1,108 +1,85 @@
-        document.querySelector('.ad-button').addEventListener('click', function() {
-    const newRow = document.createElement('tr');
-    newRow.contentEditable = "true";
+var nameError = document.getElementById('name-error');
+var lastNameError = document.getElementById('lastName-error');
+var emailError = document.getElementById('email-error');
+var passwordError = document.getElementById('password-error');
+var conPasswordError = document.getElementById('conPassword-error');
+var submitError = document.getElementById('submit-error');
 
-    const cell1 = document.createElement('td');
-    cell1.textContent = "New Project";
+function validateName(){
+    var name = document.getElementById('contact-name').value;
+    if (name.length == 0){
+        nameError.innerHTML = 'Name is required';
+        return false;
+    }
+    if(!name.match(/^[A-Za-z]+$/)){
+        nameError.innerHTML = 'Alphabetic characters only';
+        return false;
+    }
+    nameError.innerHTML = '<i class="fa fa-check-circle"></i>';
+    return true;
+    
+    }
+    function validateLastName(){
+        var name = document.getElementById('last-name').value;
+        if (name.length == 0){
+            lastNameError.innerHTML = 'Last Name is required'
+            return false;
+        }
+if(!name.match(/^[A-Za-z]+$/)){
+    nameError.innerHTML = 'Alphabetic characters only';
+    return false;
+}
+lastNameError.innerHTML = '<i class="fa fa-check-circle"></i>';
+return true;
 
-    const cell2 = document.createElement('td');
-    cell2.textContent = "Start Date";
+}
+function validatePassword(){
+    var password = document.getElementById('password').value;
 
-    const cell3 = document.createElement('td');
-    cell3.textContent = "End Date";
+if(password.length == 0){
+    passwordError.innerHTML = 'password is required';
+    return false;
+}
+    if(password.length ==10){
+        phoneError.innerHTML = 'Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 9 characters long';
+        return false;
+    }
+    if (!password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{9,}$/)) {
+        passwordError.innerHTML = 'Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 9 characters long';
+        return false;
+    }
+    
+    passwordError.innerHTML= '<i class="fas fa-check-circle"></i>';
+    return true;
+}
+function validateConPassword() {
 
-    newRow.appendChild(cell1);
-    newRow.appendChild(cell2);
-    newRow.appendChild(cell3);
+    var confirmPassword = document.getElementById('confirm-password').value;
+    
+    if (confirmPassword !== password) {
+        conPasswordError.innerHTML = 'Passwords does not match';
+        return false;
+    } 
+}
+function validateEmail(){
+    var email = document.getElementById('contact-email').value;
+    if (email.length ==0){
+        emailError.innerHTML = 'Email is required';
+        return false;
+    }
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = 'Invalid Email';
+        return false;
+    }
+    emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
+    return true;
+}
 
-    document.querySelector('.projects-table tbody').appendChild(newRow);
-});
-
-document.querySelector('.add-button').addEventListener('click', function() {
-    const newItem = document.createElement('li');
-    newItem.contentEditable = "true";
-
-    const span1 = document.createElement('span');
-    span1.textContent = "New Announcement";
-
-    const span2 = document.createElement('span');
-    span2.textContent = "0ms";
-
-    const span3 = document.createElement('span');
-    span3.textContent = "0";
-
-    newItem.appendChild(span1);
-    newItem.appendChild(span2);
-    newItem.appendChild(span3);
-
-    document.querySelector('.announcement-list').appendChild(newItem);
-});
-
-// const CLIENT_ID = '938323347705-350h9ce8cl2lamcotn0osfcm5ut13qbj.apps.googleusercontent.com'; // Replace with your actual client ID
-// const API_KEY = 'AIzaSyC3Ut-pcurJosI_in9dTYRszQSz1lolx68'; // Replace with your actual API key
-// const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-// const SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
-
-// const authorizeButton = document.getElementById('authorize_button');
-// const content = document.getElementById('content');
-
-// function handleClientLoad() {
-//     gapi.load('client:auth2', initClient);
-// }
-
-// function initClient() {
-//     gapi.client.init({
-//         apiKey: API_KEY,
-//         clientId: CLIENT_ID,
-//         discoveryDocs: DISCOVERY_DOCS,
-//         scope: SCOPES
-//     }).then(() => {
-//         const authInstance = gapi.auth2.getAuthInstance();
-//         authorizeButton.onclick = () => handleAuthClick(authInstance);
-//         authInstance.isSignedIn.listen(updateSigninStatus);
-//         updateSigninStatus(authInstance.isSignedIn.get());
-//     }, error => {
-//         console.error(JSON.stringify(error, null, 2));
-//     });
-// }
-
-// function updateSigninStatus(isSignedIn) {
-//     if (isSignedIn) {
-//         authorizeButton.style.display = 'none';
-//         listUpcomingEvents();
-//     } else {
-//         authorizeButton.style.display = 'block';
-//     }
-// }
-
-// function handleAuthClick(authInstance) {
-//     authInstance.signIn();
-// }
-
-// function listUpcomingEvents() {
-//     gapi.client.calendar.events.list({
-//         'calendarId': 'primary',
-//         'timeMin': (new Date()).toISOString(),
-//         'showDeleted': false,
-//         'singleEvents': true,
-//         'maxResults': 10,
-//         'orderBy': 'startTime'
-//     }).then(response => {
-//         const events = response.result.items;
-//         content.innerHTML = '<h2>Upcoming Events:</h2>';
-//         if (events.length > 0) {
-//             const ul = document.createElement('ul');
-//             events.forEach(event => {
-//                 const li = document.createElement('li');
-//                 const when = event.start.dateTime || event.start.date;
-//                 li.textContent = `${event.summary} (${when})`;
-//                 ul.appendChild(li);
-//             });
-//             content.appendChild(ul);
-//         } else {
-//             content.innerHTML += '<p>No upcoming events found.</p>';
-//         }
-//     });
-// }
-
-// handleClientLoad();
+function validateForm(){
+    if(!validateName() || !validatePassword() || !validateEmail()){
+        submitError.style.display = 'block';
+        submitError.innerHTML = 'please fix error to submit';
+        setTimeout(function(){submitError.style.display = 'none';},3000);
+        return false;
+    }
+}

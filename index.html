@@ -2,128 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Log in to continue</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
+    <div class="logo">Workflow</div>
     <header>
-        <div class="logo-link">
-            <h1>Workflow</h1>
-            <nav class="links">
-                <a href="index.html">Home</a>
-                <a href="inbox.html">Inbox</a>
-                <a href="checklist.html">Checklist</a>
-            </nav>
-        </div>
-        <div>
-            <span>Product Designer</span>
-            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
-            <a href="profile.html">Profile</a>
-        </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
     </header>
+
+    
     <div class="container">
-        <h1>Welcome Adeyinka!</h1>
-        <div class="dashboard">
-            <div class="cardannouncement">
-                <div class="card-header">
-                    <h2><i class="fas fa-bullhorn"></i> Announcement</h2>
-                    <button class="add-button">Add</button>
-                </div>
-                <ul class="announcement-list">
-                    <li contenteditable="true">
-                        <span>New Travel Policy</span>
-                        <span title="time">2ms</span>
-                        <span>12</span>
-                    </li>
-                    <li contenteditable="true">
-                        <span>Welcome Tolu to the team!</span>
-                        <span>3ms</span>
-                        <span>17</span>
-                    </li>
-                    <li contenteditable="true">
-                        <span>General meeting at 7pm</span>
-                        <span>12ms</span>
-                        <span>17</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="card shortcuts">
-                <div class="card-header">
-                    <h2><i class="fas fa-chevron-right"></i> My Shortcuts</h2>
-                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
-                </div>
-                <div class="shortcuts-list">
-                    <div class="shortcut">
-                        <a href="task.html"><i class="fas fa-tasks"></i> Tasks </a>
-                        
-                    </div>
-                    <div class="shortcut">
-                         <i class="fas fa-calendar-alt"></i> Events
-                    </div>
-                    <div class="shortcut">
-                        <a href="logged.html"> <i class="fas fa-clock"></i> Logged time</a>
-                        
-                    </div>
-                    <div class="shortcut">
-                        <a href="finduser.html"><i class="fas fa-user-plus"></i> Add User </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card projects">
-                <div class="card-header">
-                    <h2><i class="fa fa-file-text"></i> My Projects</h2>
-                    <div class="tabs">
-                        <div class="tab active">Recent</div>
-                        <div class="tab">Starred</div>
-                    </div>  
-                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
-                </div>
-                
-                <table class="projects-table">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr contenteditable="true">
-                            <td>Landing Page Redesign</td>
-                            <td>1 May</td>
-                            <td>1 Sept</td>
-                        </tr>
-                        <tr contenteditable="true">
-                            <td>Landing Page Redesign</td>
-                            <td>1 May</td>
-                            <td>1 Sept</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="ad-button">Add</button>
-            </div>
-            <div class="card agenda">
-                <div class="card-header">
-                    <h2><i class="fas fa-calendar-check"></i> Agenda</h2>
-                        <div class="tabs">
-                        <div class="tab active">Today</div>
-                        <div class="tab">Overdue</div>
-                        <div class="tab">Upcoming</div>
-                    </div>
-                    <span id="addShortcut" class="font"> <i class="fa fa-ellipsis-v"></i></span>
-                </div>
-                
-                <div class="agenda-content">
-                    <p>Agenda items here</p>
-                </div>
-            </div>
-        </div>
+<img src="img/grp4.png" alt="picture">
+<main>
+ <h2>Log in to continue</h2>
+<div class="input-group">
+    <input type="tel" placeholder=" Email " id="contact-email" onkeyup="validateEmail()">
+    <span id="email-error"  style="color: red;"></span>
+</div>
+    <div class="input-group">
+        <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
+        <span id="password-error"  style="color: red;"></span>
     </div>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="JS/script.js"></script>
+
+ <p>Forgot your password?  <a href="#">Reset</a></p>
+ <p>Or login with</p>
+<i class="fas fa-google"></i>
+<a href="https://www.google.com"></a>
+<br>
+<a href="create.html"><button>Login</button></a>
+
+    <p>New to Workflow?  <a href="signup.html">Register</p>
+   
+
+
+</main>
+<script src="JS/login.js"></script>
 </body>
 </html>
