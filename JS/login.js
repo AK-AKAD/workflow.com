@@ -91,9 +91,21 @@ function signup(){
     let passw = docuemnt.getElementById('contact-password').value;
     let Cpassw = document.getElementById('confirm-password').value;
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'signup.php');
-    xhttp.send("firstName="+fName+"lastName="+lName+"email="+email+"passw="+passw+"Cpassw="+Cpassw);
+    $.ajax({
+        type: "POST",
+        url: "signup.php",
+        data: {
+            firstName: fName,
+            lastName: lName,
+            email: email,
+            passw: passw,
+            Cpassw: Cpassw
+        },
+        dataType: "Json",
+        success: function(response){
+            console.log("valid login");
+        }
+    })
 
     window.location.href="Login.html";
 }
@@ -102,13 +114,18 @@ function login(){
     let email = document.getElementById('contact-email');
     let passw = document.getElementById('contact-password');
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'login.php');
-    xhttp.send("email="+email+"passw="+passw);
-
-    // create a function to check with the login was successful
-    // before sending user to the index
-    // and send error message to the html page
+    $.ajax({
+        type: "POST",
+        url: "login.php",
+        data:{
+            email: email,
+            passw: passw
+        },
+        dataType: "Json",
+        success: function(response){
+            console.log('valid login');
+        }
+    });
     window.location.href='index.html';
 
 }

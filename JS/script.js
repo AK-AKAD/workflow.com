@@ -1,4 +1,19 @@
-        document.querySelector('.ad-button').addEventListener('click', function() {
+document.addEventListener("DOMContentLoaded", function(){
+    $.ajax({
+        type: "GET",
+        url: "index.php",
+        data:{
+            info:'firstname'
+        },
+        dataType: "Json",
+        success: function(response){
+            let welcome = docuemnt.getElementById('welcome');
+            welcome.innerText = "welcome "+response;
+        }
+    });
+});
+       
+       document.querySelector('.ad-button').addEventListener('click', function() {
     const newRow = document.createElement('tr');
     newRow.contentEditable = "true";
 

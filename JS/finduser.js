@@ -35,9 +35,12 @@ function renderUsers(userList) {
         
         userContainer.appendChild(userItem);
     });
+
+    listUsers();
 }
 
 document.getElementById('search-button').addEventListener('click', () => {
+    searchDB();
     const searchTerm = document.getElementById('user-search').value.toLowerCase();
     const filteredUsers = users.filter(user => user.name.toLowerCase().includes(searchTerm));
     renderUsers(filteredUsers);
@@ -45,3 +48,32 @@ document.getElementById('search-button').addEventListener('click', () => {
 
 // Initially render all users
 renderUsers(users);
+
+function searchDB(){
+    try{
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'C:\Users\akino\Documents\Mactavis Projects\GRP-4\GRP-4\GRP-4\findUser.php?action=find', true);
+        xhttp.send(document.getElementById('user-search').value);
+    
+        let result = xhttp.responseText;
+        console.log(result);
+
+    }catch(error){
+        console.log(error);
+    } 
+}
+
+function listUsers(){
+    try{
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'C:\Users\akino\Documents\Mactavis Projects\GRP-4\GRP-4\GRP-4\findUser.php?action=list', true);
+        xhttp.send();
+
+        let result = xhttp.responseText;
+        console.log(result);
+
+    }catch(error){
+        console.log(error);
+    }
+    
+}

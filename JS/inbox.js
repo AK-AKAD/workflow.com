@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("searchInput");
     const searchBtn = document.getElementById("searchBtn");
@@ -9,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const sendReplyBtn = document.getElementById("sendReplyBtn");
     const replyText = document.getElementById("replyText");
 
+    console.log("1");
+    msg();
     // Function to switch tabs
     tabButtons.forEach(function(button) {
         button.addEventListener("click", function() {
@@ -60,4 +63,25 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Message moved to Junk.");
         }
     });
+
 });
+
+
+function msg(){
+    console.log('function ran')
+    try{
+        $.ajax({
+            type: "GET",
+            url: "index.php",
+            data: {
+                info: 'messages'
+            },
+            dataType: "Json",
+            success: function(response){
+                console.log(response);
+            }
+        });
+    }catch(Exception){
+        console.log(Exception);
+    }
+}

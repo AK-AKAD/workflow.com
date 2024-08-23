@@ -30,7 +30,7 @@ function signup($pdo, $firstName, $lastName, $email, $Upassw){
         $stmt->bindParam(":passw", $Upassw, PDO::PARAM_STR);
 
         $stmt->execute();
-        header('Location: login.php');
+        echo "success";
     }catch(PDOException $e){
         $signupError = $e->getMessage();
     }
