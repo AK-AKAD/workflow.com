@@ -2,46 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Log in to continue</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-    <div class="logo">Workflow</div>
+    
     <header>
-            <div class="auth-buttons">
+        <div class="logo">Workflow</div>
+            <!-- <div class="auth-buttons">
                 <button class="login-btn">Login</button>
                 <button class="signup-btn">Sign up</button>
-            </div>
+            </div> -->
     </header>
 
     
-    <div class="container">
-<img src="img/grp4.png" alt="picture">
-<main>
- <h2>Log in to continue</h2>
-<div class="input-group">
-    <input type="tel" placeholder=" Email " id="contact-email" onkeyup="validateEmail()">
-    <span id="email-error"  style="color: red;"></span>
-</div>
-    <div class="input-group">
-        <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
-        <span id="password-error"  style="color: red;"></span>
-    </div>
+    <span class="container">
 
- <p>Forgot your password?  <a href="#">Reset</a></p>
- <p>Or login with</p>
-<i class="fas fa-google"></i>
-<a href="https://www.google.com"></a>
-<br>
-<a href="create.html"><button>Login</button></a>
+        <img src="img/grp4.png" alt="Display picture">
+        <main class="fix">
+            <h2>Log in to continue</h2>
+            <div class="input-group">
+                <input type="email" placeholder=" Email " id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"  style="color: red;"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Password" id="password" onkeyup="validatePassword()">
+                <span id="password-error"  style="color: red;"></span>
+            </div>
 
-    <p>New to Workflow?  <a href="signup.html">Register</p>
-   
+            <p>Forgot your password?  <a href="#">Reset</a></p>
+            
+            <p>Or login with</p>
 
+            <i class="fas fa-google"></i>
 
-</main>
-<script src="JS/login.js"></script>
+            <a href="https://www.google.com"></a>
+            <br>
+
+            <a href="create.html"><button>Login</button></a>
+
+            <p>New to Workflow?  <a href="signup.html">Register</p>
+        
+            </main>
+    </span>
+
+<script src="JS/script.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ h2 {
     margin-top: 0;
 }
 
-.add-task-button {
+.addTaskBtn {
     display: inline-block;
     margin-bottom: 20px;
     padding: 10px 20px;
@@ -29,7 +29,7 @@ h2 {
     cursor: pointer;
 }
 
-.add-task-button:hover {
+.addTaskBtn:hover {
     background-color: #5a32a3;
 }
 
@@ -77,5 +77,59 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-content{
+    background-color: white;
+    margin: 100px auto;
+    padding: 10px 20px;
+    width: 30%;
+    border-radius: 5px;
+}
+.modal h4{
+    padding-top: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 10px;
+}
+.modal p{
+    text-decoration: none;
+    padding:  10px 20px;
+}
+ input{
+    padding: 2px auto;
+    width: 100%;
+}
+
+.closeBtn{
+    float: right;
+    font-size: 30px;
+    color: #ccc;
+}
+.closeBtn:hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+ .modal button{
+    color: white;
+    background: #513BA8;
+    margin-left: 42%;
+    padding: 5px 20px;
+}
+.modal button:hover{
+    cursor: pointer;
+
 }
 

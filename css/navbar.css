@@ -3,9 +3,9 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0 30px;
-    background-color: #fff;
     border-bottom: 1px grey solid;
 }
+
 .logo-link{
     display: flex;
      align-items: center;
@@ -21,3 +21,4 @@ header {
     color: black;
 }
 
+ 

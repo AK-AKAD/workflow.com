@@ -1,6 +1,14 @@
-document.getElementById('add-task-button').addEventListener('click', function() {
+document.getElementById('addTaskBtn').addEventListener('click', function() {
+    openModal();
+});
+
+document.getElementById('fillIn').addEventListener('click', function() {
     addNewTask();
 });
+
+var modal = document.getElementById('simpleModal');
+var addTaskBtn = document.getElementById('addTaskBtn');
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 function addNewTask(title = 'New Task', assignees = 'Assignee', due = 'Due Date') {
     const tasksTable = document.getElementById('tasks-table').getElementsByTagName('tbody')[0];
@@ -13,11 +21,6 @@ function addNewTask(title = 'New Task', assignees = 'Assignee', due = 'Due Date'
     const assigneesCell = newRow.insertCell(1);
     const dueCell = newRow.insertCell(2);
     const actionsCell = newRow.insertCell(3);
-
-    // Make cells content editable
-    titleCell.contentEditable = "true";
-    assigneesCell.contentEditable = "true";
-    dueCell.contentEditable = "true";
 
     // Set default content
     titleCell.textContent = title;
@@ -63,3 +66,22 @@ function deleteTask(row) {
 addNewTask('Landing page design', 'Adeyinka, Mmesoma', 'Aug 20');
 addNewTask('Create Database', 'Akin', 'Aug 20');
 addNewTask('Document', 'Olamide', 'Aug 20');
+
+
+addTaskBtn.addEventListener('click', openModal);
+
+closeBtn.addEventListener('click', closeModal);
+
+window.addEventListener('click', outsideClick);
+function openModal() {
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+function outsideClick(e) {
+    if(e.target == modal) {
+    modal.style.display = 'none';
+}
+ } ;

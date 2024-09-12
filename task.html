@@ -26,7 +26,7 @@
     <div class="container">
         <h2>Tasks</h2>
         <p>Add a new Task and assign members to various tasks</p>
-        <button id="add-task-button" class="add-task-button">+ Add Task</button>
+        <button id="addTaskBtn" class="addTaskBtn"> Add Task</button>
         <table id="tasks-table">
             <thead>
                 <tr>
@@ -40,6 +40,17 @@
                 <!-- Existing task rows will go here -->
             </tbody>
         </table>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeBtn">&times;</span>
+                        <h4>Add Task</h4>
+                        <p> Event Title:  <input type="text"></p>
+                        <p> Assignees: <input type="text"></p>
+                        <p> Due Date: <input type="text"></p>
+                        <button id="fillIn" class="go"> Add</button> 
+                    </div>
+                </div>
+
     </div>
     <script src="JS/task.js"></script>
 </body>
