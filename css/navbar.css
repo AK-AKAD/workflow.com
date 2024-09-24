@@ -21,4 +21,10 @@ header {
     color: black;
 }
 
- 
+ @media (max-width: 1000px) {
+    header {
+        width: 100%;
+        font-size: 1rem;
+       
+    }
+ }
