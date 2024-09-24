@@ -126,4 +126,14 @@ width: 40%;
     cursor: pointer;
 
 }
- 
+
+@media (max-width: 1000px) {
+    .contd {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .contd {
+        width: 50%;
+    }
+}
