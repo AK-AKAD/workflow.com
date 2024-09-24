@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />">
@@ -11,12 +12,29 @@
     <title>Calender</title>
 </head>
 <body>
+
+    <header>
+        <div class="logo-link">
+            <h1>Workflow</h1>
+            <nav class="links">
+                <a href="dashboard.html">Home</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="checklist.html">Checklist</a>
+            </nav>
+        </div>
+        <div>
+            <span>Product Designer</span>
+            <img src="profile.jpg" width="40" height="40" style="border-radius: 50%; margin-left: 10px;">
+            <a href="profile.html">Profile</a>
+        </div>
+    </header>
+
 <div class="container">
     <div class="left">
         <div class="calender">
             <div class="month">
-                <i class="fa fa-angle-left prev"></i>
                 <div class="date"></div>
+                <i class="fa fa-angle-left prev"></i>
                 <i class="fa fa-angle-right next"></i>
             </div>
             <div class="weekdays">
@@ -29,48 +47,45 @@
                 <div>Sat</div>
             </div>
             <div class="days">
-                <!-- <div class="day prev-date">30</div>
-                <div class="day prev-date">31</div>
-                <div class="day">1</div>
-                <div class="day">2</div>
-                <div class="day">3</div>
-                <div class="day event">4</div>
-                <div class="day">5</div>
-                <div class="day">6</div>
-                <div class="day">7</div>
-                <div class="day">8</div>
-                <div class="day event active">9</div>
-                <div class="day today ">10</div>
-                <div class="day">11</div>
-                <div class="day">12</div>
-                <div class="day">13</div>
-                <div class="day event">14</div>
-                <div class="day">15</div>
-                <div class="day">16</div>
-                <div class="day">17</div>
-                <div class="day">18</div>
-                <div class="day">19</div>
-                <div class="day">20</div>
-                <div class="day">21</div>
-                <div class="day">22</div>
-                <div class="day">23</div>
-                <div class="day">24</div>
-                <div class="day">25</div>
-                <div class="day">26</div>
-                <div class="day">27</div>
-                <div class="day">28</div>
-                <div class="day">29</div>
-                <div class="day">30</div>
-                <div class="day next-date">1</div>
-                <div class="day next-date">2</div>
-                <div class="day next-date">3</div> -->
+                
             </div>
             <div class="goto-today">
                 <div class="goto">
                     <input type="text" placeholder="mm/yyyy" class="date-input">
-                    <button class="goto-btn">go</button>
+                    <button class="goto-btn">Go</button>
                 </div>
-                <button class="today-btn">today</button>
+                <button class="today-btn">Today</button>
+            </div>
+        </div>
+        </div>
+            <div class="right">
+
+                <button id="eventBtn" class="add-event">
+                    <i class="fa fa-plus "></i>
+                    Add Event
+                </button>
+
+                <div class="today-date">
+                    <div class="event-day">Wed</div>
+                    <div class="event-date">13 November 2024</div>
+                </div>
+                <div class="events">
+                
+                </div>
+                    <!-- <div class="add"> -->
+                        
+                    </div>
+                </div>       
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeBtn">&times;</span>
+                        <h4>Add Event</h4>
+                        <p> Event Title:  <input type="text" class="event-name"></p>
+                        <p> Event Time: <input type="text" class="event-time"></p>
+                        <!-- <p> Event Date: <input type="text" class="event-date"></p> -->
+                        <button id="fillIn" class="add-event-btn"> Add</button> 
+                    </div>
+                </div>
             </div>
         </div>
     </div>

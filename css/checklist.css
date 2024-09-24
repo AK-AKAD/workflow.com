@@ -24,7 +24,7 @@ body {
     padding: 5px 10px;
     cursor: pointer;
 }
-.checklist{
+.checklist {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,4 +120,62 @@ td {
     cursor: pointer;
 }
 
-@media 
+
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 20px; 
+    }
+
+    .filter input {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .filter-button {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    table th, table td {
+        padding: 2px; 
+        font-size: 14px; 
+    }
+
+    .status {
+        font-size: 14px; 
+    }
+
+    #addRowButton, #check {
+        width: 100%; 
+        padding: 25px; 
+    }
+
+    .delete-button {
+        width: 100%; 
+        padding: 10px; 
+    }
+}
+
+
+/* @media (max-width: 1000px) {
+    .container {
+width: 90%;
+height: 100%;
+    }
+    .filter input {
+width: ;
+    }
+    .filter-button {
+
+    }
+    .checklist {
+
+    }
+    #addRowButton {
+
+    }
+    .delete-button{
+
+    }
+} */

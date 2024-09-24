@@ -154,19 +154,41 @@ color: black;
 }
 
 .agenda-content {
+    width: 90%;
     padding: 10px;
 }
 
 
 
-@media (min-width: 601px) and (max-width: 768px) {
+@media (max-width: 1000px) {
     .container{
         flex-direction: column;
         width: 100%; 
         height: auto;
+        
+    }
+    .cardannouncement {
+        width: 90%;
     }
     .dashboard{
         display: grid;
         width: 100%;
+    }
+    .shortcuts-list {
+align-items: center;
+width: 90%;
+    }
+    .projects-table  {
+width: 80%;
+    }
+    .agenda-content {
+border-width: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .container{
+        flex-direction: column;
+        width: 40%; 
+        height: auto;
     }
 }

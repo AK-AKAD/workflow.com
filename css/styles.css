@@ -1,0 +1,72 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #007BFF; 
+}
+#workflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #007BFF; 
+    margin: 0;
+    overflow: hidden;
+}
+
+.letter {
+    font-size: 68px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    opacity: 0;
+    animation: bounce 1s ease forwards;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 20px;
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+} 
+
+button {
+    padding: 4px 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.login-btn {
+    color: #513BA8;
+    background-color: #fff;
+    border: 1px solid #513BA8;
+}
+.login-btn:hover{
+    background-color: #513BA8;
+    color: #fff;
+}
+.signup-btn {
+    background-color: #fff;
+    color: #513BA8;
+    border: 1px solid #513BA8;
+}
+
+.signup-btn:hover {
+    background-color: #513BA8;
+    color: #fff;
+} 
+
+@media (max-width: 1000px) {
+    #workflow {
+        width: 90%;
+        height: 100%;
+    }
+    .letter {
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 50%;
+    }
+    
+}
