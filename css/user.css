@@ -125,25 +125,26 @@ h2 {
 }
 
 
-@media  (min-width:320px) and (max-width: 498px) {
+@media  (min-width:320px) and (max-width: 500px) {
     .main{
         text-align: center;
         /* padding-top: 20px;
         padding-bottom: 10px; */
-        width: 90%;
-        height: auto;
+        width: 100vw;
+        height: 100vw;
     }
  
     .announcements{
         text-align: center;
-        width: 90%;
-        height: auto;
+        width: 100vw;
+        height: 100vw;
         overflow-y: hidden;
-        padding: 0 20px;
+        padding:10px;
     }
     .dashboard{
         text-align: center;
-        padding: 0px 20px;
+        padding: 20px;
+        width: 100vw;
     }
 }
 

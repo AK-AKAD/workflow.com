@@ -7,9 +7,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 16%;
     height: 100vh;
     background-color: #007BFF; 
-    margin: 0;
     overflow: hidden;
 }
 

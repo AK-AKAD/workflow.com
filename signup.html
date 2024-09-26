@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
             
@@ -33,17 +34,19 @@
             </div>
             <div class="input-group">
                 <input type="password" placeholder="Password" id="password" onkeyup="validatePassword()">
+                <i id="toggle-password" class="fas fa-eye" style="color: #4c4e52;"></i>
                 <span id="password-error" style="color: red;"></span>
             </div>
             <div class="input-group">
                  <input type="password" placeholder="Confirm password" id="confirm-password" onkeyup="validateConPassword()">
+                 <i id="toggle-password" class="fas fa-eye" style="color: #4c4e52;"></i>
                 <span id="conPassword-error" style="color: red;"></span>
             </div>
             
             <p>By signing up, you're agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
 
-            <a href="index.html"><button>Sign up</button></a>
-            <p>Joined us before? <a href="index.html">Login</a></p>
+            <a href="login.html"><button>Sign up</button></a>
+            <p>Joined us before? <a href="login.html">Login</a></p>
 
 
         </main>
@@ -52,7 +55,7 @@
             
     </span>
 
-<script src="JS/script.js"></script>
+<script src="JS/login.js"></script>
 </body>
 </html>
 

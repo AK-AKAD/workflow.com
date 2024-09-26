@@ -22,6 +22,10 @@ header::after{
     left: 0;
 }
 
+#toggle-password {
+    margin-left: 80%;
+    font-size: 0.8rem;
+}
 /* .container{
         background-color: transparent;
     display: inline-flex;
@@ -90,6 +94,23 @@ main p{
     font-size: 15px;
     line-height: 28px;
 }
+
+.input-group {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+
+#toggle-password {
+    padding-bottom: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; 
+}
+
 .input-group input{
     width: 100%;
     background: transparent;

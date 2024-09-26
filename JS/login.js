@@ -4,6 +4,7 @@ var emailError = document.getElementById('email-error');
 var passwordError = document.getElementById('password-error');
 var conPasswordError = document.getElementById('conPassword-error');
 var submitError = document.getElementById('submit-error');
+var togglePasswordIcon = document.getElementById('.toggle-password');
 
 function validateName(){
     var name = document.getElementById('contact-name').value;
@@ -83,3 +84,17 @@ function validateForm(){
         return false;
     }
 }
+
+
+
+togglePasswordIcon.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text'; 
+        togglePasswordIcon.classList.remove('fa-eye');
+        togglePasswordIcon.classList.add('fa-eye-slash');  
+    } else {
+        passwordInput.type = 'password';  
+        togglePasswordIcon.classList.remove('fa-eye-slash');
+        togglePasswordIcon.classList.add('fa-eye');  
+    }
+});

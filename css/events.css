@@ -435,7 +435,7 @@ background: linear-gradient(90deg, #3f4458, transparent);
     }
 }
 
-@media (max-width: 500px) {
+@media  (min-width:300px) and (max-width: 500px) {
 .calender .month {
     height: 75px;
 }

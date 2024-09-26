@@ -119,6 +119,7 @@ width: 40%;
  .modal button{
     color: white;
     background: #513BA8;
+    border-radius: 5px;
     margin-left: 42%;
     padding: 5px 20px;
 }
@@ -127,13 +128,40 @@ width: 40%;
 
 }
 
-@media (max-width: 1000px) {
+@media  (min-width:300px) and (max-width: 500px) {
+    .create {
+        max-width: 100vw;
+        width: 100vw;
+        max-height: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .h2 {
+        font-size: 0.5rem;
+        font-weight: 200;
+    }
+    .create-workspace {
+        padding: 10px;
+        size-adjust: 30px;
+    }
+    .modal {
+        
+        align-items: center;
+        justify-content: center;
+    }
+    .modal button {
+        display: flex;
+        width: 60%;
+        padding: 0 10px;
+       left: 10px;
+       right: 50px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
     .contd {
         width: 100%;
     }
 }
-@media (max-width: 500px) {
-    .contd {
-        width: 50%;
-    }
-}
+
